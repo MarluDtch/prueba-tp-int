@@ -1,6 +1,4 @@
 
-/* RESET RULES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root {
     --white: #afafaf;
     //--red: #e31b23;
@@ -38,16 +36,12 @@
     appearance: none;
   }
   
-  /* Remove native arrow on IE */
   select::-ms-expand {
     display: none;
   }
   
-  /*Remove dotted outline from selected option on Firefox*/
-  /*https://stackoverflow.com/questions/3773430/remove-outline-from-select-box-in-ff/18853002#18853002*/
-  /*We use !important to override the color set for the select on line 99*/
   select:-moz-focusring {
-    color: transparent !important;
+    color: transparent !important; //para anular el conjunto de colores 
     text-shadow: 0 0 0 var(--white);
   }
   
@@ -60,10 +54,9 @@
   }
   
   body {
-    font: 18px/1.5 "Open Sans", sans-serif;
-    //background: var(--bodyColor);
-    color: var(--white);
-    margin: 1.5rem 0;
+    font: 18px/1.5 "Open Sans", sans-serif; //no incluida en base (typography), ojo dsp mirarlo y ponerlo
+    //color: var(--white);
+    //margin: 1.5rem 0;
     
   }
   
@@ -74,8 +67,8 @@
   }
   
   
-  /* FORM ELEMENTS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  // ELEMENTOS DEL FORMULARIO
+  
   .my-form{
     background-color: #292a2b;
     
@@ -109,7 +102,6 @@
   
   .my-form ::placeholder {
     color: inherit;
-    /*Fix opacity issue on Firefox*/
     opacity: 1;
   }
   
@@ -149,9 +141,9 @@
   }
   
   
-  /* FORM BTNS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .my-form .required-msg {
+  // BOTONES
+
+  .my-form .required-mje {
     display: none;
     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/asterisk.svg)
       no-repeat center left / 15px 15px;
@@ -192,8 +184,8 @@
   }
   
   
-  /* CUSTOM CHECKBOX
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  //CHECKBOX
+
   .my-form input[type="checkbox"] {
     position: absolute;
     left: -9999px;
@@ -234,10 +226,7 @@
     transform: rotate(45deg);
   }
   
-  
-  
-  /* MQ
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
   @media screen and (min-width: 600px) {
     .my-form .grid {
       display: grid;
@@ -257,7 +246,7 @@
       margin-bottom: 0;
     }
   
-    .my-form .required-msg {
+    .my-form .required-mje {
       display: block;
     }
   }
